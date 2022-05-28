@@ -40,7 +40,7 @@ def graph(a, b, r, f, integral):
                 specs=[[{}]],
                 subplot_titles=(f'A área de todos os trapézios é de aproximadamente {integral:.6f}',))
     domain = np.arange(a, b, 1e-3)
-    fig.add_trace(go.Scatter(x = domain, y = f(domain), mode='lines', name = 'Input function', line=dict(color=my_themes.paletteGenerator(color))), row=1, col=1)
+    fig.add_trace(go.Scatter(x = domain, y = f(domain), mode='lines', name = 'Função a integrar', line=dict(color=my_themes.paletteGenerator(color))), row=1, col=1)
     n = abs((b-a)/r)
     X0 = a
     X = X0 + n
